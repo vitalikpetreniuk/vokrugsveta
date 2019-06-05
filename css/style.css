@@ -1,0 +1,764 @@
+@font-face {
+    font-family: 'SFUIDisplayRegular';
+    src: url('../fonts/SFUIDisplayRegular.eot');
+    src: url('../fonts/SFUIDisplayRegular.eot') format('embedded-opentype'),
+    url('../fonts/SFUIDisplayRegular.woff2') format('woff2'),
+    url('../fonts/SFUIDisplayRegular.woff') format('woff'),
+    url('../fonts/SFUIDisplayRegular.ttf') format('truetype'),
+    url('../fonts/SFUIDisplayRegular.svg#SFUIDisplayRegular') format('svg');
+}
+
+@font-face {
+    font-family: 'SFUIDisplayMedium';
+    src: url('../fonts/SFUIDisplayMedium.eot');
+    src: url('../fonts/SFUIDisplayMedium.eot') format('embedded-opentype'),
+    url('../fonts/SFUIDisplayMedium.woff2') format('woff2'),
+    url('../fonts/SFUIDisplayMedium.woff') format('woff'),
+    url('../fonts/SFUIDisplayMedium.ttf') format('truetype'),
+    url('../fonts/SFUIDisplayMedium.svg#SFUIDisplayMedium') format('svg');
+}
+@font-face {
+    font-family: 'SFUIDisplayBold';
+    src: url('../fonts/SFUIDisplayBold.eot');
+    src: url('../fonts/SFUIDisplayBold.eot') format('embedded-opentype'),
+    url('../fonts/SFUIDisplayBold.woff2') format('woff2'),
+    url('../fonts/SFUIDisplayBold.woff') format('woff'),
+    url('../fonts/SFUIDisplayBold.ttf') format('truetype'),
+    url('../fonts/SFUIDisplayBold.svg#SFUIDisplayBold') format('svg');
+}
+
+
+
+
+#wrapper
+{
+    min-height: 100vh;
+    background: #00a1e7 url("../img/tulips.jpg") no-repeat left top;
+    background-size: 40.5% auto;
+
+    font-family: 'SFUIDisplayRegular', sans-serif;
+}
+
+.header
+{
+    padding-top: 20px;
+    padding-left: 29%;
+    padding-right: 2.5%;
+
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+    -ms-flex-pack: justify;
+    justify-content: space-between;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+}
+.header .klm-logo img
+{
+    display: block;
+}
+
+.header .login
+{
+    width: 94px;
+    height: 42px;
+    line-height: 42px;
+    text-align: center;
+    background: #f6770d;
+    color: #ffffff;
+    cursor: pointer;
+
+    border: none;
+    outline: none;
+    border-radius: 8px;
+
+    font-family: 'SFUIDisplayMedium', sans-serif;
+    font-size: 18px;
+    text-transform: uppercase;
+}
+
+.content
+{
+    margin-top: 40px;
+    padding-bottom: 80px;
+}
+.content .top-content
+{
+     padding-left: 48%;
+}
+.content .top-content h1
+{
+    margin: 0 0 40px;
+    font-family: 'SFUIDisplayMedium', sans-serif;
+    font-size: 72px;
+    letter-spacing: .01em;
+    line-height: 1.2em;
+    color: #ffffff;
+
+    text-transform: uppercase;
+}
+.content .top-content form
+{
+    width: 640px;
+}
+.content .top-content form input[type='text'],
+.content .top-content form input[type='email'],
+.content .top-content form input[type='tel'],
+.content .top-content form input[type='password']
+{
+    display: block;
+    width: 100%;
+    height: 68px;
+    margin-bottom: 30px;
+
+    padding: 0 30px;
+    box-sizing: border-box;
+    border-radius: 10px;
+
+    background: #ffffff;
+    border: 2px solid #828180;
+    outline: none;
+
+    font-family: 'SFUIDisplayRegular', sans-serif;
+    font-size: 24px;
+    letter-spacing: .01em;
+    color: #828180;
+
+    text-transform: uppercase;
+}
+.content .top-content form input[type='text']:focus,
+.content .top-content form input[type='email']:focus,
+.content .top-content form input[type='tel']:focus,
+.content .top-content form input[type='password']:focus
+{
+    border: 2px solid #f6770d;
+}
+
+
+/* Customize the label (the container) */
+.agree {
+    display: block;
+    position: relative;
+    padding-left: 35px;
+    margin-bottom: 12px;
+    cursor: pointer;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+
+    font-family: 'SFUIDisplayRegular', sans-serif;
+    font-size: 24px;
+    line-height: 30px;
+    color: #000000;
+}
+
+/* Hide the browser's default checkbox */
+input[type='checkbox'] {
+    position: absolute;
+    opacity: 0;
+    cursor: pointer;
+    height: 0;
+    width: 0;
+}
+
+/* Create a custom checkbox */
+.checkmark {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 28px;
+    width: 28px;
+    box-sizing: border-box;
+    border: 2px solid #515151;
+}
+
+
+/* Create the checkmark/indicator (hidden when not checked) */
+.checkmark:after {
+    content: "";
+    position: absolute;
+    display: none;
+}
+
+/* Show the checkmark when checked */
+.agree input:checked ~ .checkmark:after {
+    display: block;
+}
+
+/* Style the checkmark/indicator */
+.agree .checkmark:after {
+    width: 24px;
+    height: 24px;
+    background: url("../img/checkmark.png") no-repeat center;
+}
+
+.content .top-content form input[type='submit']
+{
+    margin: 30px auto 0;
+    display: block;
+    width: 496px;
+    height: 67px;
+    border: none;
+    outline: none;
+    background: #f6770d;
+    border-radius: 10px;
+    cursor: pointer;
+
+    font-size: 31px;
+    letter-spacing: .01em;
+    text-align: center;
+    text-transform: uppercase;
+
+    color: #ffffff;
+}
+
+
+.content .bottom-content
+{
+    font-size: 24px;
+    line-height: 28px;
+    letter-spacing: .01em;
+    color: #ffffff;
+}
+.content .bottom-content p
+{
+    margin-bottom: 20px;
+}
+.content .bottom-content p:last-child
+{
+    margin-bottom: 0;
+}
+.register .content .bottom-content
+{
+    max-width: 1250px;
+    margin: 100px auto 0;
+}
+.login .content .bottom-content
+{
+    padding: 55px 10% 0 35%;
+}
+
+
+/* COLLECT =========================================================== */
+
+#wrapper.account
+{
+    background: #00a1e7 url("../img/tulips-wide.jpg") no-repeat center top;
+    background-size: 100% auto;
+}
+#wrapper.account .content
+{
+    margin-top: 0;
+}
+#wrapper.account .content .top-content
+{
+    text-align: center;
+    padding-top:  16vw;
+    padding-left: 0;
+}
+#wrapper.account .content .top-content h1
+{
+    margin-bottom: 25px;
+    padding-top: 25px;
+    font-size: 91px;
+}
+#wrapper.account .content .top-content h1 span
+{
+    font-size: 101px;
+    color: #f6770d;
+}
+
+#wrapper.account .content .top-content .account-buttons
+{
+    display: flex;
+    justify-content: center;
+}
+#wrapper.account .content .top-content .exchange-tulips,
+#wrapper.account .content .top-content .collect-more
+{
+    margin: 30px 40px 50px;
+    display: block;
+    width: 496px;
+    height: 67px;
+    border: none;
+    outline: none;
+    background: #f6770d;
+    border-radius: 10px;
+    cursor: pointer;
+    font-size: 31px;
+    letter-spacing: .01em;
+    text-align: center;
+    text-transform: uppercase;
+    color: #ffffff;
+}
+
+#wrapper.account .content .bottom-content
+{
+    max-width: 1250px;
+    margin: 0 auto;
+}
+
+#wrapper.account .popup
+{
+    display: block;
+    width: 691px;
+    height: 665px;
+
+
+    position: fixed;
+    z-index: 20;
+    top: 50%;
+    left: 50%;
+
+    padding-left: 30px;
+
+    -webkit-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+
+    background: url("../img/popup.png") no-repeat center;
+    background-size: 100% auto;
+}
+
+#wrapper.account .popup .close
+{
+    cursor: pointer;
+
+    position: absolute;
+    right: 15.5%;
+    top: 26%;
+}
+#wrapper.account .popup span
+{
+    display: block;
+    text-align: center;
+
+    font-family: 'SFUIDisplayBold', sans-serif;
+    font-size: 33px;
+    line-height: 40px;
+    letter-spacing: .01em;
+
+    margin-top: 55%;
+}
+#wrapper.account .popup .popup-buttons
+{
+    display: flex;
+    justify-content: center;
+
+    margin-top: 45px;
+}
+#wrapper.account .popup .popup-buttons button
+{
+    width: 196px;
+    height: 67px;
+
+    font-family: 'SFUIDisplayBold', sans-serif;
+    font-size: 44px;
+    letter-spacing: .01em;
+
+    border: none;
+    border-radius: 8px;
+    outline: none;
+
+    cursor: pointer;
+
+    -webkit-transition: all .15s linear;
+    transition: all .15s linear;
+}
+#wrapper.account .popup .popup-buttons button.yes
+{
+    background: #f6770d;
+    color: #ffffff;
+    margin-right: 18px;
+}
+#wrapper.account .popup .popup-buttons button.no
+{
+    background: #f1f1f1;
+    margin-left: 18px;
+}
+#wrapper.account .popup .popup-buttons button:hover
+{
+    box-shadow: 2px 2px 2px rgba(0, 0, 0, .15);
+}
+
+/* MEDIA QUERIES ==================================================================================================== */
+
+@media only screen and (max-width:1800px)
+{
+    .header
+    {
+        -webkit-box-align: end;
+        -ms-flex-align: end;
+        align-items: flex-end;
+    }
+    .header .klm-logo img
+    {
+        max-width: 400px;
+    }
+
+    .content
+    {
+        margin-top: 30px;
+        padding-bottom: 50px;
+    }
+    .content .top-content h1
+    {
+        font-size: 54px;
+        margin-bottom: 30px;
+    }
+
+    .content .top-content form
+    {
+        width: 500px;
+    }
+    .content .top-content form input[type='text'], .content .top-content form input[type='email'],
+    .content .top-content form input[type='tel'], .content .top-content form input[type='password']
+    {
+        margin-bottom: 15px;
+        height: 54px;
+        font-size: 19px;
+    }
+    .checkmark
+    {
+        width: 24px;
+        height: 24px;
+    }
+    .agree
+    {
+        font-size: 21px;
+        line-height: 26px;
+    }
+    .agree .checkmark:after
+    {
+        width: 20px;
+        height: 20px;
+        background-size: 100% auto;
+    }
+    .content .top-content form input[type='submit']
+    {
+        width: 400px;
+        font-size: 24px;
+        padding: 2px 0 0;
+    }
+
+    .content .bottom-content
+    {
+        font-size: 19px;
+    }
+    .register .content .bottom-content
+    {
+        max-width: 1100px;
+    }
+    .login .content .bottom-content
+    {
+        padding-top: 30px;
+    }
+
+
+    /* Account ================================================ */
+
+    #wrapper.account .content .top-content h1
+    {
+        font-size: 70px;
+    }
+    #wrapper.account .content .top-content h1 span
+    {
+        font-size: 80px;
+    }
+    #wrapper.account .content .top-content .exchange-tulips, #wrapper.account .content .top-content .collect-more
+    {
+        width: 400px;
+        height: 54px;
+        font-size: 24px;
+    }
+
+    #wrapper.account .content .bottom-content
+    {
+        max-width: 1100px;
+    }
+
+
+    #wrapper.account .popup
+    {
+        width: 550px;
+        height: 529px;
+    }
+    #wrapper.account .popup span
+    {
+        font-size: 27px;
+        line-height: 34px;
+    }
+    #wrapper.account .popup .close
+    {
+        right: 14%;
+        top: 24%;
+    }
+
+    #wrapper.account .popup .popup-buttons
+    {
+        margin-top: 30px;
+    }
+    #wrapper.account .popup .popup-buttons button
+    {
+        width: 140px;
+        height: 54px;
+        font-size: 27px;
+    }
+
+}
+@media only screen and (max-width:1439px)
+{
+    .content .top-content h1
+    {
+        font-size: 48px;
+    }
+    .content .bottom-content
+    {
+        font-size: 17px;
+    }
+    .register .content .bottom-content
+    {
+        margin-top: 50px;
+    }
+
+
+    /* Account ================================================ */
+
+    #wrapper.account .content .top-content h1
+    {
+        font-size: 50px;
+    }
+    #wrapper.account .content .top-content h1 span
+    {
+        font-size: 60px;
+    }
+    #wrapper.account .content .top-content .exchange-tulips, #wrapper.account .content .top-content .collect-more
+    {
+        margin: 0 20px 30px;
+    }
+
+    #wrapper.account .popup
+    {
+        width: 500px;
+        height: 481px;
+    }
+}
+@media only screen and (max-width:1279px)
+{
+    .header .klm-logo img
+    {
+        max-width: 300px;
+    }
+    .header .login
+    {
+        height: 34px;
+        line-height: 34px;
+        font-size: 15px;
+    }
+    .content .top-content h1
+    {
+        font-size: 38px;
+    }
+
+    .content .top-content form
+    {
+        width: 400px;
+    }
+
+    .content .top-content form input[type='text'], .content .top-content form input[type='email'],
+    .content .top-content form input[type='tel'], .content .top-content form input[type='password']
+    {
+        height: 44px;
+        font-size: 17px;
+
+        margin-bottom: 10px;
+    }
+
+    .agree
+    {
+        font-size: 17px;
+        line-height: 21px;
+
+        padding-left: 25px;
+    }
+    .checkmark
+    {
+        width: 18px;
+        height: 18px;
+    }
+    .agree .checkmark:after
+    {
+        width: 14px;
+        height: 14px;
+
+        background-size: 100% auto;
+    }
+    .content .top-content form input[type='submit']
+    {
+        height: 46px;
+        width: 250px;
+        font-size: 17px;
+        padding: 1px 0 0;
+    }
+    .login .content .bottom-content
+    {
+        padding-right: 5%;
+    }
+
+    .register .content .bottom-content
+    {
+        max-width: 900px;
+    }
+
+
+    /* Account ================================================ */
+
+    #wrapper.account .content .top-content h1
+    {
+        font-size: 42px;
+    }
+
+    #wrapper.account .content .top-content .exchange-tulips, #wrapper.account .content .top-content .collect-more
+    {
+        width: 340px;
+        height: 46px;
+        font-size: 21px;
+    }
+
+    #wrapper.account .content .bottom-content
+    {
+        max-width: 900px;
+    }
+}
+@media only screen and (max-width:991px)
+{
+    #wrapper
+    {
+        background: #00a1e7;
+    }
+
+    .header
+    {
+        padding: 20px 20px 0;
+    }
+    .content .top-content
+    {
+        padding-left: 20px !important;
+        padding-right: 20px !important;
+    }
+    .content .top-content h1
+    {
+        text-align: center;
+    }
+    .content .top-content form
+    {
+        max-width: 600px;
+        width: 100%;
+        margin: 0 auto;
+    }
+    .register .content .bottom-content
+    {
+        width: 100%;
+        padding: 0 20px;
+        box-sizing: border-box;
+    }
+    .login .content .bottom-content
+    {
+        padding-left: 20px;
+        padding-right: 20px;
+    }
+
+
+    /* Account ================================================ */
+
+    #wrapper.account .content .top-content .exchange-tulips, #wrapper.account .content .top-content .collect-more
+    {
+        margin: 0 10px 30px;
+    }
+    #wrapper.account .content .bottom-content
+    {
+        padding-left: 20px;
+        padding-right: 20px;
+    }
+}
+@media only screen and (max-width:500px)
+{
+    .header .klm-logo img
+    {
+        max-width: 200px;
+    }
+    .header .login
+    {
+        width: 70px;
+        height: 30px;
+        line-height: 30px;
+        font-size: 12px;
+    }
+
+    .content .top-content h1
+    {
+        font-size: 24px;
+    }
+
+
+    .content .top-content form input[type='text'], .content .top-content form input[type='email'],
+    .content .top-content form input[type='tel'], .content .top-content form input[type='password']
+    {
+        height: 36px;
+        font-size: 14px;
+        padding: 0 20px;
+    }
+    .content .top-content form input[type='submit'] {
+        height: 36px;
+        width: 200px;
+        font-size: 14px;
+    }
+
+
+    .register .content .bottom-content
+    {
+        margin-top: 30px;
+    }
+
+
+    /* Account ================================================ */
+
+
+    #wrapper.account .content .top-content .account-buttons
+    {
+        -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    }
+    #wrapper.account .content .top-content .account-buttons button:nth-child(1)
+    {
+        margin-bottom: 10px;
+    }
+    #wrapper.account .popup {
+        width: 320px;
+        height: 308px;
+    }
+    #wrapper.account .popup span {
+        font-size: 15px;
+        line-height: 19px;
+    }
+    #wrapper.account .popup .popup-buttons
+    {
+        margin-top: 15px;
+    }
+    #wrapper.account .popup .popup-buttons button
+    {
+        width: 80px;
+        height: 34px;
+        font-size: 17px;
+    }
+    #wrapper.account .popup .popup-buttons button.yes
+    {
+        margin-right: 8px;
+    }
+    #wrapper.account .popup .popup-buttons button.no
+    {
+        margin-left: 8px;
+    }
+}
