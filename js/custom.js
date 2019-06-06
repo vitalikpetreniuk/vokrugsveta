@@ -79,6 +79,7 @@ function tulips_show() {
         }
 
     }
+
     random_tulip_show();
 }
 
@@ -117,6 +118,64 @@ $(function(){
         popup.on('click touch', function(event) {
             event.stopPropagation();
         });
+
+        //цепляем событие на onclick кнопки
+        var promocode10 = document.getElementById('pc10-copy');
+        promocode10.addEventListener('click', function () {
+            //нашли наш контейнер
+            var ta = document.getElementById('promocode10');
+            //производим его выделение
+            var range = document.createRange();
+            range.selectNode(ta);
+            window.getSelection().addRange(range);
+
+            //пытаемся скопировать текст в буфер обмена
+            try {
+                document.execCommand('copy');
+            } catch(err) {
+                console.log('Can`t copy, boss');
+            }
+            //очистим выделение текста, чтобы пользователь "не парился"
+            window.getSelection().removeAllRanges();
+        });
+        var promocode15 = document.getElementById('pc15-copy');
+        promocode15.addEventListener('click', function () {
+            //нашли наш контейнер
+            var ta = document.getElementById('promocode15');
+            //производим его выделение
+            var range = document.createRange();
+            range.selectNode(ta);
+            window.getSelection().addRange(range);
+
+            //пытаемся скопировать текст в буфер обмена
+            try {
+                document.execCommand('copy');
+            } catch(err) {
+                console.log('Can`t copy, boss');
+            }
+            //очистим выделение текста, чтобы пользователь "не парился"
+            window.getSelection().removeAllRanges();
+        });
+        var promocode20 = document.getElementById('pc20-copy');
+        promocode20.addEventListener('click', function () {
+            //нашли наш контейнер
+            var ta = document.getElementById('promocode20');
+            //производим его выделение
+            var range = document.createRange();
+            range.selectNode(ta);
+            window.getSelection().addRange(range);
+
+            //пытаемся скопировать текст в буфер обмена
+            try {
+                document.execCommand('copy');
+            } catch(err) {
+                console.log('Can`t copy, boss');
+            }
+            //очистим выделение текста, чтобы пользователь "не парился"
+            window.getSelection().removeAllRanges();
+        });
+
+
     }
 
 

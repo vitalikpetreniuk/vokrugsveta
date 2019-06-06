@@ -251,6 +251,21 @@ input[type='checkbox'] {
     background: #00a1e7 url("../img/tulips-wide.jpg") no-repeat center top;
     background-size: 100% auto;
 }
+#wrapper.account .container
+{
+    position: relative;
+}
+#wrapper.account .header
+{
+    padding-top: 50px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    padding-left: 0;
+    display: flex;
+    justify-content: flex-end;
+}
 #wrapper.account .content
 {
     margin-top: 0;
@@ -281,10 +296,11 @@ input[type='checkbox'] {
 #wrapper.account .content .top-content .exchange-tulips,
 #wrapper.account .content .top-content .collect-more
 {
-    margin: 30px 40px 50px;
+    margin: 30px 40px 0;
     display: block;
     width: 496px;
     height: 67px;
+    line-height: 67px;
     border: none;
     outline: none;
     background: #f6770d;
@@ -300,7 +316,7 @@ input[type='checkbox'] {
 #wrapper.account .content .bottom-content
 {
     max-width: 1250px;
-    margin: 0 auto;
+    margin: 50px auto 0;
 }
 
 #wrapper.account .popup
@@ -407,6 +423,109 @@ input[type='checkbox'] {
     cursor: pointer;
 }
 
+.promocode-section
+{
+    margin-top: 23px;
+}
+.promocode
+{
+    position: relative;
+    font-family: 'SFUIDisplayRegular', sans-serif;
+    color: #ffffff;
+    font-size: 19px;
+    margin: 7px 0;
+
+    text-align: center;
+}
+.promocode .pc-inner
+{
+    display: inline-block;
+    position: relative;
+}
+.promocode strong
+{
+    font-family: 'SFUIDisplayMedium', sans-serif;
+}
+.promocode span
+{
+    font-family: 'SFUIDisplayMedium', sans-serif;
+
+    display: inline-block;
+    margin-left: 20px;
+    padding: 10px 15px;
+
+    background: #f6770d;
+    color: #fff;
+}
+
+.promocode .promocode-copy
+{
+    position: absolute;
+    width: 16px;
+    height: 16px;
+    top: 50%;
+    right: -26px;
+
+    -webkit-transform: translateY(-50%);
+    transform: translateY(-50%);
+
+    cursor: pointer;
+    opacity: .8;
+}
+.promocode .promocode-copy:hover
+{
+    opacity: 1;
+}
+.promocode .promocode-copy img
+{
+    width: 100%;
+    display: block;
+}
+
+
+
+
+#wrapper.page404
+{
+    background: #00a1e7 url("../img/tulips-wide.jpg") no-repeat center top;
+    background-size: 100% auto;
+}
+
+#wrapper.page404 .content
+{
+    margin-top: 0;
+    height: 100vh;
+    box-sizing: border-box;
+    position: relative;
+}
+#wrapper.page404 .content div
+{
+    position: absolute;
+    text-align: center;
+
+    top: 50%;
+    left: 0;
+    right: 0;
+
+    -webkit-transform: translateY(-50%);
+    transform: translateY(-50%);
+
+    color: #ffffff;
+}
+#wrapper.page404 .content div h1
+{
+    font-family: 'SFUIDisplayBold', sans-serif;
+    font-size: 120px;
+}
+
+#wrapper.page404 .content div p
+{
+    font-family: 'SFUIDisplayRegular', sans-serif;
+    font-size: 21px;
+    margin-top: 10px;
+    display: inline-block;
+}
+
 
 /* MEDIA QUERIES ==================================================================================================== */
 
@@ -496,6 +615,7 @@ input[type='checkbox'] {
     {
         width: 400px;
         height: 54px;
+        line-height: 54px;
         font-size: 24px;
     }
 
@@ -561,7 +681,11 @@ input[type='checkbox'] {
     }
     #wrapper.account .content .top-content .exchange-tulips, #wrapper.account .content .top-content .collect-more
     {
-        margin: 0 20px 30px;
+        margin: 0 20px 0;
+    }
+    #wrapper.account .content .bottom-content
+    {
+        margin-top: 30px;
     }
 
     #wrapper.account .popup
@@ -649,6 +773,7 @@ input[type='checkbox'] {
     {
         width: 340px;
         height: 46px;
+        line-height: 46px;
         font-size: 21px;
     }
 
@@ -700,10 +825,11 @@ input[type='checkbox'] {
 
     #wrapper.account .content .top-content .exchange-tulips, #wrapper.account .content .top-content .collect-more
     {
-        margin: 0 10px 30px;
+        margin: 0 10px 0;
     }
     #wrapper.account .content .bottom-content
     {
+        margin-top: 30px;
         padding-left: 20px;
         padding-right: 20px;
     }
@@ -786,5 +912,26 @@ input[type='checkbox'] {
     #wrapper.account .popup .popup-buttons button.no
     {
         margin-left: 8px;
+    }
+
+    .promocode
+    {
+        font-size: 14px;
+    }
+
+
+    #wrapper.account .header
+    {
+        padding-top: 30px;
+    }
+
+
+    #wrapper.page404 .content div h1
+    {
+        font-size: 90px;
+    }
+    #wrapper.page404 .content div p
+    {
+        font-size: 17px;
     }
 }
