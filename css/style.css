@@ -62,7 +62,8 @@
 
 .header .login
 {
-    width: 94px;
+    width: auto;
+    padding: 0 15px;
     height: 42px;
     line-height: 42px;
     text-align: center;
@@ -77,6 +78,7 @@
     font-family: 'SFUIDisplayMedium', sans-serif;
     font-size: 18px;
     text-transform: uppercase;
+    text-decoration: none;
 }
 
 .content
@@ -710,14 +712,15 @@ input[type='checkbox'] {
 {
     .header .klm-logo img
     {
-        max-width: 200px;
+        max-width: 180px;
     }
     .header .login
     {
-        width: 70px;
-        height: 30px;
-        line-height: 30px;
-        font-size: 12px;
+        /*width: 70px;*/
+        padding: 0 10px;
+        height: 24px;
+        line-height: 24px;
+        font-size: 10px;
     }
 
     .content .top-content h1

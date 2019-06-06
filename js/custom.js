@@ -64,9 +64,9 @@ function tulips_show() {
         if (typeof $.cookie('tulip') === 'undefined')
         {
 
-            var chance = Math.floor(Math.random() * 5) + 1;
+            var chance = Math.floor(Math.random() * 2) + 1;
 
-            if(chance === 4)
+            if(chance === 2)
             {
                 random_tulip();
                 random_tulip_position();
@@ -74,7 +74,7 @@ function tulips_show() {
             }
 
             var date = new Date();
-            date.setTime(date.getTime() + (900 * 1000));
+            date.setTime(date.getTime() + (30 * 1000));
             $.cookie('tulip', 'hide', { expires: date });
         }
 
